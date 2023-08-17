@@ -31,3 +31,6 @@ louvain==0.8.0
 | V1_Breast_Cancer_Block_A_Section_1            | https://www.10xgenomics.com/resources/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0 |      |
 
 ## Usage
+DLPHCtest.py: run STMSGAL on DLPFC
+main.py: run STMSGAL on Adult Mouse Brain (FFPE) and Ductal_Carcinoma_in_situ
+breatmain.py: run STMSGAL on V1_Breast_Cancer_Block_A_Section_1
