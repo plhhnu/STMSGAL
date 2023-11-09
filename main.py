@@ -2,7 +2,7 @@ import warnings
 warnings.filterwarnings("ignore")
 import datetime
 now1 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-print("时间1:", now1)
+print("time1:", now1)
 import pandas as pd
 import numpy as np
 import scanpy as sc
@@ -41,7 +41,6 @@ d = 6
 pre_resolution = 0.2
 n_epochs=300
 n_clusters = 12
-reg_ssc_coef = 1
 cost_ssc_coef = 1
 
 n_top_genes = 3000
@@ -65,7 +64,6 @@ print(Mean_edge)
 #Running
 adata ,pred_dsc= STMSGAL.train_STMSGAL(adata, alpha=alpha, pre_resolution=pre_resolution,
                               n_epochs=n_epochs, save_attention=True,save_loss=False,
-                              reg_ssc_coef = reg_ssc_coef,
                               cost_ssc_coef = cost_ssc_coef,dsc_alpha=dsc_alpha, d=d)
 # pre-clustering result
 if not os.path.exists(f'./outputs/{category}'):
@@ -149,7 +147,7 @@ if not os.path.exists(f'./h5ad/{category}'):
 adata.filename = f'./h5ad/{category}/final_{category}_{parameter}.h5ad'
 print(adata.isbacked)
 now2 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-print("时间2:", now2)
+print("time2:", now2)
 print("dav:", dav)
 print("cal:", cal)
 print("sil:", sil)

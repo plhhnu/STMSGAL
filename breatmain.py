@@ -2,7 +2,7 @@ import warnings
 warnings.filterwarnings("ignore")
 import datetime
 now1 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-print("时间1:", now1)
+print("time1:", now1)
 import pandas as pd
 import numpy as np
 import scanpy as sc
@@ -18,9 +18,7 @@ import os
 import eval
 os.environ["CUDA_VISIBLE_DEVICES"]= "1"
 
-random.seed(1234)
-np.random.seed(1234)
-#tf.set_random_seed(1234)
+
 #Adult Mouse Brain (FFPE),V1_Adult_Mouse_Brain_Coronal_Section_1,Adult Mouse Kidney (FFPE)
 #Adult_Mouse_Brain (Coronal)
 category = "V1_Breast_Cancer_Block_A_Section_1"
@@ -63,8 +61,7 @@ STMSGAL.Stats_Spatial_Net(adata)
 #Running STMSGAL with cell type-aware module
 adata,pred_dsc = STMSGAL.train_STMSGAL(adata, alpha=alpha, pre_resolution=pre_resolution,
                               n_epochs=n_epochs, save_attention=True,save_loss=False,
-                              n_cluster = 20,cost_ssc_coef = cost_ssc_coef
-                             )
+                              n_cluster = 20,cost_ssc_coef = cost_ssc_coef)
 
 if not os.path.exists(f'./outputs/{category}'):
     os.makedirs(f'./outputs/{category}')
@@ -134,4 +131,4 @@ if not os.path.exists(f'./h5ad/{category}'):
 adata.filename = f'./h5ad/{category}/final_{category}_{parameter}.h5ad'
 print(adata.isbacked)
 now2 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-print("时间2:", now2)
+print("time2:", now2)
