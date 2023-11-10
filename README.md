@@ -10,8 +10,6 @@ scikit-learn==1.2.1
 
 tqdm==4.64.1
 
-#tensorflow==1.15.0
-
 scikit-misc==0.1.4
 
 matplotlib>=3.4.0
