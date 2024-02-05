@@ -38,4 +38,5 @@ pot==0.8.2
 | Adult Mouse Brain (FFPE)                      | https://www.10xgenomics.com/resources/datasets/adult-mouse-brain-ffpe-1-standard-1-3-0 |      |
 | Ductal_Carcinoma_in_situ                      | https://www.10xgenomics.com/resources/datasets/human-breast-cancer-ductal-carcinoma-in-situ-invasive-carcinoma-ffpe-1-standard-1-3-0 |      |
 | V1_Breast_Cancer_Block_A_Section_1            | https://www.10xgenomics.com/resources/datasets/human-breast-cancer-block-a-section-1-1-standard-1-1-0 |      |
+| Mouse visual cortex STARmap                   | https://www.dropbox.com/sh/f7ebheru1lbz91s/AADm6D54GSEFXB1feRy6OSASa/visual_1020/20180505_BY3_1kgenes?dl=0&subfolder_nav_tracking=1  |      |
 
