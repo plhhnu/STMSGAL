@@ -3,7 +3,6 @@ import os
 import sys
 import matplotlib
 matplotlib.use('Agg')
-#matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import pylab as pl
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
@@ -207,18 +206,6 @@ def res_search_fixed_clus(cluster_type, adata, fixed_clus_count, increment=0.005
                 break
     return res
 
-def saveCsv(ARI_list, parameter, ARImean):
-    with open(f'./outputs/DLPFC/ARIlist.csv', mode='a+') as f:
-        f_writer = csv.writer(
-            f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        f_writer.writerow([str("  ")])
-        f_writer.writerow([str(now)])
-        f_writer.writerow(["parameter", str(parameter)])
-        f_writer.writerow(["ARI_list", str(ARI_list)])
-        f_writer.writerow(["ARI_medium:" + str((sorted(ARI_list)[5] + sorted(ARI_list)[6]) / 2)])
-        # f_writer.writerow([str(data_name),"ARI:" + str(ARI)])
-
 
 def CCST_on_ST(args,ARI_list,NMI_list,parameter):
     lambda_I = args.lambda_I
@@ -288,10 +275,6 @@ def CCST_on_ST(args,ARI_list,NMI_list,parameter):
             # sc.tl.pca(adata, n_comps=30, svd_solver='arpack')
             sc.pp.neighbors(adata, use_rep='X_embedding')
             sc.tl.umap(adata)
-            # eval_resolution = res_search_fixed_clus(cluster_type, adata, n_clusters)
-            # # eval_resolution = 0.1
-            # print("eval_resolution = ", eval_resolution)
-            # sc.tl.louvain(adata, resolution=eval_resolution)
 
             # read the annotation
             Ann_df = pd.read_csv(f'{data_root}/{args.data_name}/metadata.tsv', sep='\t')
@@ -417,7 +400,7 @@ def CCST_on_ST(args,ARI_list,NMI_list,parameter):
                 f_writer.writerow([str(" ")])
 
             now2 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            print("时间2:", now2)
+            
         else:
             data_root = '/data/pxh/SEDR/data'
             adata = sc.read_visium(os.path.join(data_root, args.data_name))
@@ -473,7 +456,7 @@ def CCST_on_ST(args,ARI_list,NMI_list,parameter):
             print(adata.isbacked)
             import datetime
             now2 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            print("时间2:", now2)
+           
             import csv
             with open(f"./outputs/{args.data_name}/{args.data_name}_index.csv", mode='a+') as f:
                 f_writer = csv.writer(
