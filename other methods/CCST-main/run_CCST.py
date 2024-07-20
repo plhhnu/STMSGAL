@@ -27,7 +27,6 @@ if __name__ == "__main__":
     import argparse
     import datetime
     now1 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    print("时间1:", now1)
 
     parser = argparse.ArgumentParser()
     # ================Specify data type firstly===============
