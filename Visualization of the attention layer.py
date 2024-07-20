@@ -3,8 +3,6 @@ import networkx as nx
 import warnings
 warnings.filterwarnings("ignore")
 import datetime
-now1 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-print("时间1:", now1)
 import pandas as pd
 import numpy as np
 import scanpy as sc
