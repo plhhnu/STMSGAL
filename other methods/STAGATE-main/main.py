@@ -2,7 +2,6 @@ import warnings
 warnings.filterwarnings("ignore")
 import datetime
 now1 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-print("时间1:", now1)
 import pandas as pd
 import numpy as np
 import scanpy as sc
@@ -58,12 +57,6 @@ for proj_idx in range(len(proj_list)):
     adata = STAGATE.train_STAGATE(adata, alpha=alpha, pre_resolution=pre_resolution,
                                   n_epochs=n_epochs, save_attention=True, save_reconstrction=False)
 
-    # # pre-clustering result
-    # plt.rcParams["figure.figsize"] = (3, 3)
-    # sc.pl.spatial(adata, img_key="hires",
-    #               color="expression_louvain_label", size=1.5, title='pre-clustering result',show=False)
-    #
-    # plt.savefig(f'./outputs/{category}/precluster.jpg', bbox_inches='tight', dpi=150)
     if not os.path.exists(f'./outputs/{category}'):
         os.makedirs(f'./outputs/{category}')
     sc.pp.neighbors(adata, use_rep='STAGATE')
@@ -103,7 +96,6 @@ for proj_idx in range(len(proj_list)):
     table = []
 
     now2 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    print("时间2:", now2)
     print("dav:", dav)
     print("cal:", cal)
     print("sil:", sil)
