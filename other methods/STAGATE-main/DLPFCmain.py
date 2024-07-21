@@ -92,7 +92,6 @@ for proj_idx in range(len(proj_list)):
     adata.filename = f'./h5ad/DLPFC/{data_name}-ARI{ARI}.h5ad'
     print(adata.isbacked)
     now2 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    print("时间2:", now2)
 
 import csv
 with open(f'./outputs/DLPFC/ARIlist.csv', mode='a+') as f:
