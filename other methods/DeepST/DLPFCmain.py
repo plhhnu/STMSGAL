@@ -1,13 +1,8 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2023/2/27 10:21
-# @Author  : 彭新怀
-# @VERSON:1.0
-# @File    : DLPFCmain.py
-# @Description : 
+ 
 import os
 import datetime
 now1 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-print("时间1:", now1)
+
 from DeepST import run
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -121,7 +116,7 @@ for proj_idx in range(len(proj_list)):
 	adata.filename = f'./h5ad/DLPFC/{data_name}-ARI{ARI}-{parameter}.h5ad'
 	print(adata.isbacked)
 	now2 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-	print("时间2:", now2)
+
 
 
 	with open(f'./outputs/DLPFC/ARI.csv', mode='a+') as f:
