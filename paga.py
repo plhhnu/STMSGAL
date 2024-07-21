@@ -1,13 +1,5 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2023/4/15 17:08
-# @Author  : 彭新怀
-# @VERSON:1.0
-# @File    : paga.py
-# @Description : 
 import datetime
-
 now1 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-print("时间1:", now1)
 import pandas as pd
 import numpy as np
 import scanpy as sc
