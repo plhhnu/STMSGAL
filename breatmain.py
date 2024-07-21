@@ -58,7 +58,6 @@ plt.savefig(f'./outputs/{category}/Ground1.5.jpg',
 STMSGAL.Cal_Spatial_Net(adata, rad_cutoff=rad_cutoff)
 STMSGAL.Stats_Spatial_Net(adata)
 
-#Running STMSGAL with cell type-aware module
 adata,pred_dsc = STMSGAL.train_STMSGAL(adata, alpha=alpha, pre_resolution=pre_resolution,
                               n_epochs=n_epochs, save_attention=True,save_loss=False,
                               n_cluster = 20,cost_ssc_coef = cost_ssc_coef)
