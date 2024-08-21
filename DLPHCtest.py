@@ -36,8 +36,6 @@ method = 'louvain'
 refinement = True
 parameter = ''
 
-id = 25
-
 data_name = '151507'
 print('===== Project : ' + data_name)
 if data_name in ['151669', '151670', '151671', '151672']:
