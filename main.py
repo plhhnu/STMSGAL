@@ -26,7 +26,6 @@ np.random.seed(1234)
 #Ductal_Carcinoma_in_situ,Human Lymph Node
 
 label = 0
-#L_self_supervised_coef = [0.1,0.01]
 
 category = "Ductal_Carcinoma_in_situ"
 director = f"/data/pxh/SEDR/data/{category}"
@@ -99,7 +98,6 @@ def res_search_fixed_clus(adata, fixed_clus_count ,method='louvain', use_rep='ST
     return res,label
 
 
-# eval_resolution = 1
 if method == 'leiden':
     eval_resolution,label = res_search_fixed_clus(adata, n_clusters,method = method
                                             , start=0.3, end=2.5, increment=0.01)
