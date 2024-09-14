@@ -19,9 +19,7 @@ os.environ["CUDA_VISIBLE_DEVICES"]= "1"
 data_root = '/data/pxh/SEDR/data/DLPFC'
 # data_root = '/data/pxh2/STMSGAL/data/DLPFC'
 # all DLPFC folder list
-proj_list = ['151507', '151508', '151509', '151510',
-             '151669', '151670', '151671', '151672',
-             '151673', '151674', '151675', '151676']
+proj_list = ['151507', '151508', '151509', '151510']
 # set saving result path
 save_root = './outputs/DLPFC/'
 
