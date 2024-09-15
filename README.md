@@ -41,7 +41,7 @@ pot==0.8.2
 | Mouse visual cortex STARmap                   | https://www.dropbox.com/sh/f7ebheru1lbz91s/AADm6D54GSEFXB1feRy6OSASa/visual_1020/20180505_BY3_1kgenes?dl=0&subfolder_nav_tracking=1  |      |
 | Mouse embryos of Stereo-seq                   | https://db.cngb.org/stomics/mosta/  |      |
 ## Usage
-DLPHCtest.py: run STMSGAL on DLPFC
+DLPFCtest.py: run STMSGAL on DLPFC
 
 main.py: run STMSGAL on Adult Mouse Brain (FFPE) and Ductal_Carcinoma_in_situ
 
