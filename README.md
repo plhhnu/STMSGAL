@@ -47,3 +47,7 @@ main.py: run STMSGAL on Adult Mouse Brain (FFPE) and Ductal_Carcinoma_in_situ
 
 breatmain.py: run STMSGAL on V1_Breast_Cancer_Block_A_Section_1
 
+STARmap.py: run STMSGAL on Mouse visual cortex
+
+E9.5.py: run STMSGAL on Stereo-seq mouse embryo
+
