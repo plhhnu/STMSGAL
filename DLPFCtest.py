@@ -110,7 +110,6 @@ y = y.values.reshape(-1).astype(int)
 
 n_cluster = len(np.unique(np.array(y)))
 ARI = np.round(metrics.adjusted_rand_score(y, adata.obs['ground_truth'] ), 5)
-NMI = np.round(metrics.normalized_mutual_info_score(y, adata.obs['ground_truth']), 5)
 
 if not os.path.exists(f'./outputs/DLPFC/{data_name}'):
     os.makedirs(f'./outputs/DLPFC/{data_name}')
@@ -125,9 +124,6 @@ sc.pl.umap(adata, color='domain', legend_loc='on data', s=20,legend_fontoutline=
 plt.savefig(f'./outputs/DLPFC/{data_name}/ARI{ARI}_umap{n_cluster}_{parameter}.jpg',
             bbox_inches='tight', dpi=300)
 
-# print(f"dataset:{data_name}")
-# print(f"ARI={ARI},NMI={NMI}")
-
 with open(f'{save_root}/test.csv', mode='a+') as f:
     f_writer = csv.writer(
         f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -135,7 +131,6 @@ with open(f'{save_root}/test.csv', mode='a+') as f:
 
     f_writer.writerow([str(now)])
     f_writer.writerow([str(parameter)])
-    f_writer.writerow([str(data_name),"ARI:" + str(ARI), "NMI:" + str(NMI)])
     f_writer.writerow([str(" ")])
 print(adata.isbacked)
 if not os.path.exists(f'./h5ad2/DLPFC/{data_name}'):
