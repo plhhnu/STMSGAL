@@ -98,17 +98,15 @@ n_cluster = len(np.unique(np.array(y)))
 parameter = f" "
 
 ARI = np.round(metrics.adjusted_rand_score(y, Ann_df['fine_annot_type']), 4)
-NMI = np.round(metrics.normalized_mutual_info_score(y, Ann_df['fine_annot_type']), 4)
 import csv
 
-with open(f'./outputs/{category}/ARI_NMI.csv', mode='a+') as f:
+with open(f'./outputs/{category}/ARI.csv', mode='a+') as f:
     f_writer = csv.writer(
         f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     f_writer.writerow([str("  ")])
     f_writer.writerow([str(now)])
     f_writer.writerow(["ARI_list",str(ARI)])
-    f_writer.writerow(["NMI_list",str(NMI)])
     f_writer.writerow(["parameter", str(parameter)])
 
 plt.rcParams["figure.figsize"] = (3, 3)
