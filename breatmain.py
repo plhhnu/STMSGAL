@@ -117,11 +117,6 @@ sc.pl.spatial(adata, img_key="hires", color="leiden", size=1.2,show=False,title=
 plt.savefig(f'./outputs/{category}/cluster{n_cluster}_{parameter}.jpg',
             bbox_inches='tight', dpi=300)
 
-plt.rcParams["figure.figsize"] = (3, 3)
-sc.pl.umap(adata, color=['leiden'], legend_loc='on data', legend_fontoutline='2', s=20,show=False,title='(α=0.7)')
-plt.savefig(f'./outputs/{category}/umap{n_cluster}_{parameter}.jpg',
-            bbox_inches='tight', dpi=300)
-
 print(adata.isbacked)
 if not os.path.exists(f'./h5ad/{category}'):
     os.makedirs(f'./h5ad/{category}')
